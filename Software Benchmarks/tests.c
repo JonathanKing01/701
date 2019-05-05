@@ -449,12 +449,12 @@ int main()
 
     
 	for(int k = 0; k<400; k++){
-	    YCrCb(data, out);
-		// for(int i = 0; i<44; i++){
-		// 	for(int j = 0; j<36; j++){ 
-	    //         dct2D(init, DCT, 0, 0);
-		// 	} 
-		// }
+	    //YCrCb(data, out);
+		for(int i = 0; i<44; i++){
+			for(int j = 0; j<36; j++){ 
+	            dct2D(init, DCT, 0, 0);
+			} 
+		}
 
         // dct(init[0], DCT[0]);
         // idct(DCT[0], DCT[1]);
@@ -479,6 +479,24 @@ int main()
     // }
     // printf("\n\n");
     
+    //Used for the dct test
+    printf("Input: \n");
+    for(int i = 0; i< 8; i++){
+        for(int j = 0; j< 8; j++){
+            printf("%d ", init[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n\n");
+    printf("DCT output: \n");
+    for(int i = 0; i< 8; i++){
+        for(int j = 0; j< 8; j++){
+            printf("%d ", DCT[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n\n");
+
     // Used for timing tests
 	time_spent += (double)((end - begin)*1000) / CLOCKS_PER_SEC ;
 

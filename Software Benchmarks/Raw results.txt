@@ -1,0 +1,37 @@
+Results YCbCr:
+
+Time elpased is 7937.000000 milliseconds
+Av case time is 19.842500 milliseconds
+
+
+Results dct:
+Input:
+8 16 24 32 40 48 56 64
+16 24 12 19 12 20 39 51
+24 27 8 39 35 34 24 44
+40 17 28 32 24 27 8 32
+34 20 28 20 12 8 19 34
+19 39 12 27 27 12 8 34
+8 28 -5 39 34 16 12 19
+20 27 8 27 24 19 19 8
+
+DCT output:
+197 36 2 5 8 12 10 -3
+-24 -42 -22 -12 3 -7 -2 9
+5 11 -5 4 0 -16 -3 3
+-8 -8 4 -13 1 8 2 -1
+27 -5 -9 -3 -7 11 0 -2
+-12 6 0 -6 14 -6 -6 -3
+-9 10 -9 -1 13 1 0 4
+20 -5 1 -7 -14 7 2 0
+
+Time elpased is 390.000000 milliseconds
+Av case time is 0.975000 milliseconds
+
+
+Results idct:
+Input: 8 16 24 32 40 48 56 64
+
+DCT output: 288 -146 0 -16 0 -5 0 1
+
+iDCT output: 7 16 24 31 40 48 56 64
