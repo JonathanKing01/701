@@ -1,0 +1,6 @@
+
+State Machine - |top|main:main_inst|cur_state
+Name cur_state.LEGUP_0 cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 cur_state.LEGUP_pipeline_wait_lp_1 
+cur_state.LEGUP_0 0 0 0 
+cur_state.LEGUP_pipeline_wait_lp_1 1 0 1 
+cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 1 1 0 

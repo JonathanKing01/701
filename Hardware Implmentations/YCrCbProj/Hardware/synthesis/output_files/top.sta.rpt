@@ -1,0 +1,1164 @@
+Timing Analyzer report for top
+Mon May 06 09:30:21 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'clk'
+ 14. Slow 1200mV 85C Model Hold: 'clk'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'clk'
+ 23. Slow 1200mV 0C Model Hold: 'clk'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'clk'
+ 31. Fast 1200mV 0C Model Hold: 'clk'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; top                                                 ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C8                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; Test4.sdc     ; OK     ; Mon May 06 09:30:20 2019 ;
++---------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                         ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 15.000 ; 66.67 MHz ; 0.000 ; 7.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 229.31 MHz ; 229.31 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; 10.639 ; 0.000              ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.444 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; clk   ; 7.139 ; 0.000                             ;
++-------+-------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                   ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 10.639 ; main:main_inst|lp_inductionVar_stage0[29] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 4.272      ;
+; 10.701 ; main:main_inst|lp_inductionVar_stage0[22] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 4.210      ;
+; 10.864 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 4.041      ;
+; 10.896 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 4.009      ;
+; 10.901 ; main:main_inst|lp_inductionVar_stage0[28] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 4.010      ;
+; 10.912 ; main:main_inst|lp_inductionVar_stage0[14] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.994      ;
+; 10.926 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.979      ;
+; 10.943 ; main:main_inst|lp_inductionVar_stage0[23] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.968      ;
+; 10.943 ; main:main_inst|lp_inductionVar_stage0[21] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.968      ;
+; 10.944 ; main:main_inst|lp_inductionVar_stage0[30] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.967      ;
+; 10.994 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.911      ;
+; 10.997 ; main:main_inst|lp_inductionVar_stage0[15] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.909      ;
+; 11.005 ; main:main_inst|lp_inductionVar_stage0[29] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.906      ;
+; 11.008 ; main:main_inst|lp_inductionVar_stage0[18] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.903      ;
+; 11.009 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.896      ;
+; 11.010 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.895      ;
+; 11.014 ; main:main_inst|lp_inductionVar_stage0[16] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.897      ;
+; 11.042 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.863      ;
+; 11.044 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.861      ;
+; 11.049 ; main:main_inst|lp_inductionVar_stage0[10] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.857      ;
+; 11.057 ; main:main_inst|lp_valid_bit_0             ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.854      ;
+; 11.067 ; main:main_inst|lp_inductionVar_stage0[22] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.844      ;
+; 11.070 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.836      ;
+; 11.072 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.833      ;
+; 11.074 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.831      ;
+; 11.082 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.824      ;
+; 11.114 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.792      ;
+; 11.118 ; main:main_inst|lp_inductionVar_stage0[20] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.793      ;
+; 11.139 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.766      ;
+; 11.140 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.765      ;
+; 11.149 ; main:main_inst|lp_inductionVar_stage0[12] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.757      ;
+; 11.155 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.750      ;
+; 11.155 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.750      ;
+; 11.156 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.749      ;
+; 11.164 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.742      ;
+; 11.188 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.717      ;
+; 11.189 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.716      ;
+; 11.190 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.715      ;
+; 11.199 ; main:main_inst|lp_inductionVar_stage0[24] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.712      ;
+; 11.218 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.687      ;
+; 11.219 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.686      ;
+; 11.220 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.685      ;
+; 11.237 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.669      ;
+; 11.252 ; main:main_inst|lp_inductionVar_stage0[27] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.659      ;
+; 11.260 ; main:main_inst|lp_inductionVar_stage0[28] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.651      ;
+; 11.262 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.644      ;
+; 11.278 ; main:main_inst|lp_inductionVar_stage0[14] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.095     ; 3.628      ;
+; 11.284 ; main:main_inst|lp_inductionVar_stage0[19] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.627      ;
+; 11.284 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.621      ;
+; 11.285 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.620      ;
+; 11.286 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.619      ;
+; 11.287 ; main:main_inst|lp_inductionVar_stage0[23] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.624      ;
+; 11.287 ; main:main_inst|lp_inductionVar_stage0[30] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.624      ;
+; 11.292 ; main:main_inst|lp_inductionVar_stage0[21] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.619      ;
+; 11.301 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.604      ;
+; 11.301 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.604      ;
+; 11.302 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.603      ;
+; 11.303 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.602      ;
+; 11.322 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.584      ;
+; 11.331 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.574      ;
+; 11.334 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.571      ;
+; 11.335 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.570      ;
+; 11.336 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.569      ;
+; 11.352 ; main:main_inst|lp_inductionVar_stage0[13] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.554      ;
+; 11.352 ; main:main_inst|lp_inductionVar_stage0[18] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.559      ;
+; 11.361 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.544      ;
+; 11.361 ; main:main_inst|lp_inductionVar_stage0[16] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.550      ;
+; 11.363 ; main:main_inst|lp_inductionVar_stage0[15] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.095     ; 3.543      ;
+; 11.364 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.541      ;
+; 11.365 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.540      ;
+; 11.366 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.539      ;
+; 11.386 ; main:main_inst|lp_inductionVar_stage0[17] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.525      ;
+; 11.398 ; main:main_inst|lp_inductionVar_stage0[26] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.513      ;
+; 11.400 ; main:main_inst|lp_valid_bit_0             ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.511      ;
+; 11.406 ; main:main_inst|lp_inductionVar_stage0[10] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.095     ; 3.500      ;
+; 11.413 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.095     ; 3.493      ;
+; 11.415 ; main:main_inst|lp_inductionVar_stage0[9]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.095     ; 3.491      ;
+; 11.422 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.483      ;
+; 11.425 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.095     ; 3.481      ;
+; 11.430 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.475      ;
+; 11.431 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.474      ;
+; 11.432 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.473      ;
+; 11.446 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.459      ;
+; 11.447 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.458      ;
+; 11.447 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.458      ;
+; 11.448 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[23] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.457      ;
+; 11.449 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.456      ;
+; 11.457 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.095     ; 3.449      ;
+; 11.461 ; main:main_inst|lp_inductionVar_stage0[20] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.090     ; 3.450      ;
+; 11.477 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.428      ;
+; 11.478 ; main:main_inst|lp_inductionVar_stage0[9]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.427      ;
+; 11.480 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[22] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.425      ;
+; 11.481 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.424      ;
+; 11.482 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.423      ;
+; 11.492 ; main:main_inst|lp_inductionVar_stage0[12] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.095     ; 3.414      ;
+; 11.503 ; main:main_inst|lp_inductionVar_stage0[25] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.090     ; 3.408      ;
+; 11.507 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.398      ;
+; 11.508 ; main:main_inst|lp_inductionVar_stage0[9]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.397      ;
+; 11.510 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[23] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.395      ;
+; 11.511 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.096     ; 3.394      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                                         ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.444 ; main:main_inst|finish                                        ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.746      ;
+; 0.444 ; main:main_inst|lp_epilogue                                   ; main:main_inst|lp_epilogue                                   ; clk          ; clk         ; 0.000        ; 0.090      ; 0.746      ;
+; 0.444 ; main:main_inst|lp_pipeline_finish_reg                        ; main:main_inst|lp_pipeline_finish_reg                        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.746      ;
+; 0.444 ; main:main_inst|lp_active                                     ; main:main_inst|lp_active                                     ; clk          ; clk         ; 0.000        ; 0.090      ; 0.746      ;
+; 0.444 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|cur_state.LEGUP_0                             ; clk          ; clk         ; 0.000        ; 0.090      ; 0.746      ;
+; 0.498 ; main:main_inst|cur_state.LEGUP_pipeline_wait_lp_1            ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; clk          ; clk         ; 0.000        ; 0.090      ; 0.800      ;
+; 0.500 ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.090      ; 0.802      ;
+; 0.643 ; main:main_inst|lp_pipeline_finish_reg                        ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; clk          ; clk         ; 0.000        ; 0.090      ; 0.945      ;
+; 0.750 ; main:main_inst|lp_inductionVar_stage0[15]                    ; main:main_inst|lp_inductionVar_stage0[15]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.053      ;
+; 0.750 ; main:main_inst|lp_inductionVar_stage0[3]                     ; main:main_inst|lp_inductionVar_stage0[3]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.053      ;
+; 0.751 ; main:main_inst|lp_inductionVar_stage0[11]                    ; main:main_inst|lp_inductionVar_stage0[11]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.054      ;
+; 0.751 ; main:main_inst|lp_inductionVar_stage0[13]                    ; main:main_inst|lp_inductionVar_stage0[13]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.054      ;
+; 0.751 ; main:main_inst|lp_inductionVar_stage0[19]                    ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.054      ;
+; 0.751 ; main:main_inst|lp_inductionVar_stage0[5]                     ; main:main_inst|lp_inductionVar_stage0[5]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.054      ;
+; 0.751 ; main:main_inst|lp_inductionVar_stage0[1]                     ; main:main_inst|lp_inductionVar_stage0[1]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.054      ;
+; 0.752 ; main:main_inst|lp_inductionVar_stage0[27]                    ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.055      ;
+; 0.752 ; main:main_inst|lp_inductionVar_stage0[29]                    ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.055      ;
+; 0.752 ; main:main_inst|lp_inductionVar_stage0[21]                    ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.055      ;
+; 0.752 ; main:main_inst|lp_inductionVar_stage0[17]                    ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.055      ;
+; 0.753 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.056      ;
+; 0.753 ; main:main_inst|lp_inductionVar_stage0[31]                    ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.056      ;
+; 0.753 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.056      ;
+; 0.753 ; main:main_inst|lp_inductionVar_stage0[9]                     ; main:main_inst|lp_inductionVar_stage0[9]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.056      ;
+; 0.753 ; main:main_inst|lp_inductionVar_stage0[7]                     ; main:main_inst|lp_inductionVar_stage0[7]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.056      ;
+; 0.753 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.056      ;
+; 0.754 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.057      ;
+; 0.754 ; main:main_inst|lp_inductionVar_stage0[14]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.057      ;
+; 0.754 ; main:main_inst|lp_inductionVar_stage0[25]                    ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.057      ;
+; 0.754 ; main:main_inst|lp_inductionVar_stage0[23]                    ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.057      ;
+; 0.754 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.057      ;
+; 0.754 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.057      ;
+; 0.754 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[12]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.057      ;
+; 0.755 ; main:main_inst|lp_inductionVar_stage0[30]                    ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.058      ;
+; 0.755 ; main:main_inst|lp_inductionVar_stage0[20]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.058      ;
+; 0.755 ; main:main_inst|lp_inductionVar_stage0[10]                    ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.058      ;
+; 0.755 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.058      ;
+; 0.756 ; main:main_inst|lp_inductionVar_stage0[26]                    ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.059      ;
+; 0.756 ; main:main_inst|lp_inductionVar_stage0[28]                    ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.059      ;
+; 0.756 ; main:main_inst|lp_inductionVar_stage0[24]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.059      ;
+; 0.768 ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; main:main_inst|cur_state.LEGUP_0                             ; clk          ; clk         ; 0.000        ; 0.090      ; 1.070      ;
+; 0.776 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[0]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.079      ;
+; 0.796 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_epilogue                                   ; clk          ; clk         ; 0.000        ; 0.090      ; 1.098      ;
+; 0.797 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.090      ; 1.099      ;
+; 0.858 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|cur_state.LEGUP_pipeline_wait_lp_1            ; clk          ; clk         ; 0.000        ; 0.090      ; 1.160      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.080 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.090      ; 1.382      ;
+; 1.083 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|lp_valid_bit_0                                ; clk          ; clk         ; 0.000        ; 0.090      ; 1.385      ;
+; 1.105 ; main:main_inst|lp_inductionVar_stage0[1]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.408      ;
+; 1.105 ; main:main_inst|lp_inductionVar_stage0[3]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.408      ;
+; 1.106 ; main:main_inst|lp_inductionVar_stage0[5]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.409      ;
+; 1.106 ; main:main_inst|lp_inductionVar_stage0[13]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.409      ;
+; 1.106 ; main:main_inst|lp_inductionVar_stage0[17]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.409      ;
+; 1.106 ; main:main_inst|lp_inductionVar_stage0[11]                    ; main:main_inst|lp_inductionVar_stage0[12]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.409      ;
+; 1.106 ; main:main_inst|lp_inductionVar_stage0[19]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.409      ;
+; 1.107 ; main:main_inst|lp_inductionVar_stage0[21]                    ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.410      ;
+; 1.107 ; main:main_inst|lp_inductionVar_stage0[29]                    ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.410      ;
+; 1.107 ; main:main_inst|lp_inductionVar_stage0[9]                     ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.410      ;
+; 1.107 ; main:main_inst|lp_inductionVar_stage0[7]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.410      ;
+; 1.107 ; main:main_inst|lp_inductionVar_stage0[27]                    ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.410      ;
+; 1.108 ; main:main_inst|lp_inductionVar_stage0[25]                    ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.411      ;
+; 1.108 ; main:main_inst|lp_inductionVar_stage0[23]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.411      ;
+; 1.110 ; main:main_inst|lp_inductionVar_stage0[15]                    ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.086      ; 1.408      ;
+; 1.114 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[3]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.417      ;
+; 1.114 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[1]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.417      ;
+; 1.114 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.417      ;
+; 1.114 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[7]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.417      ;
+; 1.115 ; main:main_inst|lp_inductionVar_stage0[14]                    ; main:main_inst|lp_inductionVar_stage0[15]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.418      ;
+; 1.115 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[13]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.418      ;
+; 1.115 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.418      ;
+; 1.115 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[5]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.418      ;
+; 1.115 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.418      ;
+; 1.116 ; main:main_inst|lp_inductionVar_stage0[10]                    ; main:main_inst|lp_inductionVar_stage0[11]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.419      ;
+; 1.116 ; main:main_inst|lp_inductionVar_stage0[20]                    ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.419      ;
+; 1.116 ; main:main_inst|lp_inductionVar_stage0[30]                    ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.419      ;
+; 1.116 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[9]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.419      ;
+; 1.117 ; main:main_inst|lp_inductionVar_stage0[26]                    ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.420      ;
+; 1.117 ; main:main_inst|lp_inductionVar_stage0[28]                    ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.420      ;
+; 1.117 ; main:main_inst|lp_inductionVar_stage0[24]                    ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.420      ;
+; 1.123 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.426      ;
+; 1.123 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.426      ;
+; 1.123 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.426      ;
+; 1.123 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.426      ;
+; 1.124 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.091      ; 1.427      ;
+; 1.124 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.427      ;
+; 1.124 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.427      ;
+; 1.124 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.091      ; 1.427      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 250.13 MHz ; 250.13 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; 11.002 ; 0.000             ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.393 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 7.103 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                    ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 11.002 ; main:main_inst|lp_inductionVar_stage0[29] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.919      ;
+; 11.046 ; main:main_inst|lp_inductionVar_stage0[22] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.875      ;
+; 11.199 ; main:main_inst|lp_inductionVar_stage0[28] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.722      ;
+; 11.221 ; main:main_inst|lp_inductionVar_stage0[30] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.700      ;
+; 11.227 ; main:main_inst|lp_inductionVar_stage0[21] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.694      ;
+; 11.230 ; main:main_inst|lp_inductionVar_stage0[14] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.687      ;
+; 11.242 ; main:main_inst|lp_inductionVar_stage0[23] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.679      ;
+; 11.255 ; main:main_inst|lp_valid_bit_0             ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.666      ;
+; 11.258 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.659      ;
+; 11.288 ; main:main_inst|lp_inductionVar_stage0[18] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.633      ;
+; 11.290 ; main:main_inst|lp_inductionVar_stage0[15] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.627      ;
+; 11.296 ; main:main_inst|lp_inductionVar_stage0[16] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.625      ;
+; 11.315 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.602      ;
+; 11.327 ; main:main_inst|lp_inductionVar_stage0[29] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.594      ;
+; 11.336 ; main:main_inst|lp_inductionVar_stage0[10] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.581      ;
+; 11.338 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.579      ;
+; 11.350 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.567      ;
+; 11.370 ; main:main_inst|lp_inductionVar_stage0[22] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.551      ;
+; 11.372 ; main:main_inst|lp_inductionVar_stage0[20] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.549      ;
+; 11.374 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.543      ;
+; 11.385 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.532      ;
+; 11.419 ; main:main_inst|lp_inductionVar_stage0[12] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.498      ;
+; 11.424 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.493      ;
+; 11.428 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.489      ;
+; 11.456 ; main:main_inst|lp_inductionVar_stage0[24] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.465      ;
+; 11.463 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.454      ;
+; 11.463 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.454      ;
+; 11.464 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.453      ;
+; 11.475 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.442      ;
+; 11.494 ; main:main_inst|lp_inductionVar_stage0[27] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.427      ;
+; 11.511 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.406      ;
+; 11.514 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.403      ;
+; 11.523 ; main:main_inst|lp_inductionVar_stage0[19] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.398      ;
+; 11.523 ; main:main_inst|lp_inductionVar_stage0[28] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.398      ;
+; 11.545 ; main:main_inst|lp_inductionVar_stage0[30] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.376      ;
+; 11.550 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.367      ;
+; 11.551 ; main:main_inst|lp_inductionVar_stage0[21] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.370      ;
+; 11.553 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.364      ;
+; 11.554 ; main:main_inst|lp_inductionVar_stage0[14] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.363      ;
+; 11.566 ; main:main_inst|lp_inductionVar_stage0[23] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.355      ;
+; 11.574 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.343      ;
+; 11.579 ; main:main_inst|lp_valid_bit_0             ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.342      ;
+; 11.582 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.335      ;
+; 11.589 ; main:main_inst|lp_inductionVar_stage0[13] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.328      ;
+; 11.589 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.328      ;
+; 11.589 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.328      ;
+; 11.590 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.327      ;
+; 11.600 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.317      ;
+; 11.601 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.316      ;
+; 11.612 ; main:main_inst|lp_inductionVar_stage0[18] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.309      ;
+; 11.614 ; main:main_inst|lp_inductionVar_stage0[15] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.303      ;
+; 11.617 ; main:main_inst|lp_inductionVar_stage0[17] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.304      ;
+; 11.620 ; main:main_inst|lp_inductionVar_stage0[16] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.301      ;
+; 11.624 ; main:main_inst|lp_inductionVar_stage0[26] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.297      ;
+; 11.637 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.280      ;
+; 11.639 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.278      ;
+; 11.639 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.278      ;
+; 11.640 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.277      ;
+; 11.645 ; main:main_inst|lp_inductionVar_stage0[9]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.272      ;
+; 11.660 ; main:main_inst|lp_inductionVar_stage0[10] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.257      ;
+; 11.674 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.243      ;
+; 11.676 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.241      ;
+; 11.678 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.239      ;
+; 11.679 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.238      ;
+; 11.696 ; main:main_inst|lp_inductionVar_stage0[20] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.225      ;
+; 11.698 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.219      ;
+; 11.699 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.218      ;
+; 11.715 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.202      ;
+; 11.715 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.202      ;
+; 11.716 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.201      ;
+; 11.719 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.198      ;
+; 11.726 ; main:main_inst|lp_inductionVar_stage0[25] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.081     ; 3.195      ;
+; 11.726 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.191      ;
+; 11.726 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.191      ;
+; 11.727 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.190      ;
+; 11.740 ; main:main_inst|lp_inductionVar_stage0[11] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.177      ;
+; 11.743 ; main:main_inst|lp_inductionVar_stage0[12] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.174      ;
+; 11.752 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.165      ;
+; 11.761 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.156      ;
+; 11.763 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.154      ;
+; 11.765 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.152      ;
+; 11.766 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.151      ;
+; 11.780 ; main:main_inst|lp_inductionVar_stage0[24] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.141      ;
+; 11.787 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.130      ;
+; 11.800 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.117      ;
+; 11.802 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.115      ;
+; 11.804 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.113      ;
+; 11.805 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.112      ;
+; 11.818 ; main:main_inst|lp_inductionVar_stage0[27] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.103      ;
+; 11.840 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.077      ;
+; 11.840 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.077      ;
+; 11.841 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.076      ;
+; 11.841 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.076      ;
+; 11.842 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[23] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.075      ;
+; 11.844 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.073      ;
+; 11.845 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.072      ;
+; 11.847 ; main:main_inst|lp_inductionVar_stage0[19] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.081     ; 3.074      ;
+; 11.852 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.065      ;
+; 11.852 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.065      ;
+; 11.853 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.085     ; 3.064      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                                          ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.393 ; main:main_inst|finish                                        ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.393 ; main:main_inst|lp_epilogue                                   ; main:main_inst|lp_epilogue                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.393 ; main:main_inst|lp_pipeline_finish_reg                        ; main:main_inst|lp_pipeline_finish_reg                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.393 ; main:main_inst|lp_active                                     ; main:main_inst|lp_active                                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.393 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|cur_state.LEGUP_0                             ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.469 ; main:main_inst|cur_state.LEGUP_pipeline_wait_lp_1            ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.745      ;
+; 0.471 ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.747      ;
+; 0.601 ; main:main_inst|lp_pipeline_finish_reg                        ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.877      ;
+; 0.696 ; main:main_inst|lp_inductionVar_stage0[13]                    ; main:main_inst|lp_inductionVar_stage0[13]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.972      ;
+; 0.696 ; main:main_inst|lp_inductionVar_stage0[15]                    ; main:main_inst|lp_inductionVar_stage0[15]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.972      ;
+; 0.696 ; main:main_inst|lp_inductionVar_stage0[5]                     ; main:main_inst|lp_inductionVar_stage0[5]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.972      ;
+; 0.696 ; main:main_inst|lp_inductionVar_stage0[3]                     ; main:main_inst|lp_inductionVar_stage0[3]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.972      ;
+; 0.697 ; main:main_inst|lp_inductionVar_stage0[11]                    ; main:main_inst|lp_inductionVar_stage0[11]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.973      ;
+; 0.697 ; main:main_inst|lp_inductionVar_stage0[29]                    ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.973      ;
+; 0.697 ; main:main_inst|lp_inductionVar_stage0[21]                    ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.973      ;
+; 0.697 ; main:main_inst|lp_inductionVar_stage0[19]                    ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.973      ;
+; 0.698 ; main:main_inst|lp_inductionVar_stage0[27]                    ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.974      ;
+; 0.698 ; main:main_inst|lp_inductionVar_stage0[17]                    ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.974      ;
+; 0.698 ; main:main_inst|lp_inductionVar_stage0[1]                     ; main:main_inst|lp_inductionVar_stage0[1]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.974      ;
+; 0.699 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.975      ;
+; 0.699 ; main:main_inst|lp_inductionVar_stage0[31]                    ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.975      ;
+; 0.699 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.975      ;
+; 0.699 ; main:main_inst|lp_inductionVar_stage0[9]                     ; main:main_inst|lp_inductionVar_stage0[9]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.975      ;
+; 0.700 ; main:main_inst|lp_inductionVar_stage0[25]                    ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.976      ;
+; 0.700 ; main:main_inst|lp_inductionVar_stage0[23]                    ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.976      ;
+; 0.700 ; main:main_inst|lp_inductionVar_stage0[7]                     ; main:main_inst|lp_inductionVar_stage0[7]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.976      ;
+; 0.701 ; main:main_inst|lp_inductionVar_stage0[14]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.977      ;
+; 0.701 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.977      ;
+; 0.701 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.977      ;
+; 0.702 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.978      ;
+; 0.702 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.978      ;
+; 0.702 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[12]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.978      ;
+; 0.702 ; main:main_inst|lp_inductionVar_stage0[10]                    ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.978      ;
+; 0.703 ; main:main_inst|lp_inductionVar_stage0[26]                    ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.979      ;
+; 0.703 ; main:main_inst|lp_inductionVar_stage0[28]                    ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.979      ;
+; 0.703 ; main:main_inst|lp_inductionVar_stage0[30]                    ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.979      ;
+; 0.703 ; main:main_inst|lp_inductionVar_stage0[20]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.979      ;
+; 0.703 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.979      ;
+; 0.704 ; main:main_inst|lp_inductionVar_stage0[24]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.980      ;
+; 0.712 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_epilogue                                   ; clk          ; clk         ; 0.000        ; 0.081      ; 0.988      ;
+; 0.718 ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; main:main_inst|cur_state.LEGUP_0                             ; clk          ; clk         ; 0.000        ; 0.081      ; 0.994      ;
+; 0.724 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[0]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.000      ;
+; 0.741 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.017      ;
+; 0.797 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|cur_state.LEGUP_pipeline_wait_lp_1            ; clk          ; clk         ; 0.000        ; 0.081      ; 1.073      ;
+; 0.993 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|lp_valid_bit_0                                ; clk          ; clk         ; 0.000        ; 0.081      ; 1.269      ;
+; 1.018 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[1]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.294      ;
+; 1.018 ; main:main_inst|lp_inductionVar_stage0[5]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.294      ;
+; 1.018 ; main:main_inst|lp_inductionVar_stage0[13]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.294      ;
+; 1.018 ; main:main_inst|lp_inductionVar_stage0[3]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.294      ;
+; 1.018 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.294      ;
+; 1.018 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[7]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.294      ;
+; 1.019 ; main:main_inst|lp_inductionVar_stage0[14]                    ; main:main_inst|lp_inductionVar_stage0[15]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.295      ;
+; 1.019 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[3]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.295      ;
+; 1.019 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.295      ;
+; 1.019 ; main:main_inst|lp_inductionVar_stage0[21]                    ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.295      ;
+; 1.019 ; main:main_inst|lp_inductionVar_stage0[11]                    ; main:main_inst|lp_inductionVar_stage0[12]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.295      ;
+; 1.019 ; main:main_inst|lp_inductionVar_stage0[29]                    ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.295      ;
+; 1.019 ; main:main_inst|lp_inductionVar_stage0[19]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.295      ;
+; 1.020 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[13]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.296      ;
+; 1.020 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[5]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.296      ;
+; 1.020 ; main:main_inst|lp_inductionVar_stage0[10]                    ; main:main_inst|lp_inductionVar_stage0[11]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.296      ;
+; 1.020 ; main:main_inst|lp_inductionVar_stage0[20]                    ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.296      ;
+; 1.020 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.296      ;
+; 1.020 ; main:main_inst|lp_inductionVar_stage0[27]                    ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.296      ;
+; 1.021 ; main:main_inst|lp_inductionVar_stage0[28]                    ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.297      ;
+; 1.021 ; main:main_inst|lp_inductionVar_stage0[26]                    ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.297      ;
+; 1.021 ; main:main_inst|lp_inductionVar_stage0[30]                    ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.297      ;
+; 1.021 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[9]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.297      ;
+; 1.022 ; main:main_inst|lp_inductionVar_stage0[24]                    ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.298      ;
+; 1.022 ; main:main_inst|lp_inductionVar_stage0[15]                    ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.077      ; 1.294      ;
+; 1.022 ; main:main_inst|lp_inductionVar_stage0[1]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.298      ;
+; 1.022 ; main:main_inst|lp_inductionVar_stage0[17]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.298      ;
+; 1.023 ; main:main_inst|lp_inductionVar_stage0[9]                     ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.299      ;
+; 1.024 ; main:main_inst|lp_inductionVar_stage0[25]                    ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.300      ;
+; 1.024 ; main:main_inst|lp_inductionVar_stage0[7]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.300      ;
+; 1.024 ; main:main_inst|lp_inductionVar_stage0[23]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.300      ;
+; 1.033 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.309      ;
+; 1.033 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.309      ;
+; 1.034 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.310      ;
+; 1.035 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.311      ;
+; 1.035 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.311      ;
+; 1.036 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.081      ; 1.312      ;
+; 1.036 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.312      ;
+; 1.036 ; main:main_inst|lp_inductionVar_stage0[10]                    ; main:main_inst|lp_inductionVar_stage0[12]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.312      ;
+; 1.036 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.312      ;
+; 1.037 ; main:main_inst|lp_inductionVar_stage0[20]                    ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.313      ;
+; 1.037 ; main:main_inst|lp_inductionVar_stage0[28]                    ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.313      ;
+; 1.037 ; main:main_inst|lp_inductionVar_stage0[26]                    ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.313      ;
+; 1.037 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.313      ;
+; 1.038 ; main:main_inst|lp_inductionVar_stage0[24]                    ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.314      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
+; 1.039 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.315      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; 13.144 ; 0.000             ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.182 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 7.293 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                    ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 13.144 ; main:main_inst|lp_inductionVar_stage0[29] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.802      ;
+; 13.151 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.790      ;
+; 13.155 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.786      ;
+; 13.163 ; main:main_inst|lp_inductionVar_stage0[22] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.783      ;
+; 13.165 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.776      ;
+; 13.203 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.738      ;
+; 13.219 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.722      ;
+; 13.222 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.719      ;
+; 13.223 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.718      ;
+; 13.225 ; main:main_inst|lp_valid_bit_0             ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.721      ;
+; 13.226 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.715      ;
+; 13.232 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.709      ;
+; 13.233 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.708      ;
+; 13.243 ; main:main_inst|lp_inductionVar_stage0[28] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.703      ;
+; 13.248 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.694      ;
+; 13.254 ; main:main_inst|lp_inductionVar_stage0[14] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.688      ;
+; 13.258 ; main:main_inst|lp_inductionVar_stage0[21] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.688      ;
+; 13.260 ; main:main_inst|lp_inductionVar_stage0[30] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.686      ;
+; 13.265 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.677      ;
+; 13.270 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.671      ;
+; 13.271 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.670      ;
+; 13.281 ; main:main_inst|lp_inductionVar_stage0[23] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.665      ;
+; 13.287 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.654      ;
+; 13.290 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.651      ;
+; 13.290 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.651      ;
+; 13.291 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.650      ;
+; 13.292 ; main:main_inst|lp_inductionVar_stage0[10] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.650      ;
+; 13.294 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.647      ;
+; 13.294 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.647      ;
+; 13.295 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.647      ;
+; 13.299 ; main:main_inst|lp_inductionVar_stage0[15] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.643      ;
+; 13.300 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.641      ;
+; 13.300 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.641      ;
+; 13.301 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.640      ;
+; 13.304 ; main:main_inst|lp_inductionVar_stage0[18] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.642      ;
+; 13.306 ; main:main_inst|lp_inductionVar_stage0[16] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.640      ;
+; 13.307 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.635      ;
+; 13.313 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.629      ;
+; 13.318 ; main:main_inst|lp_inductionVar_stage0[29] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.041     ; 1.628      ;
+; 13.328 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.614      ;
+; 13.332 ; main:main_inst|lp_inductionVar_stage0[20] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.614      ;
+; 13.337 ; main:main_inst|lp_inductionVar_stage0[22] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.041     ; 1.609      ;
+; 13.338 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.603      ;
+; 13.338 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.603      ;
+; 13.339 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.602      ;
+; 13.344 ; main:main_inst|lp_inductionVar_stage0[12] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.598      ;
+; 13.354 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.587      ;
+; 13.355 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.586      ;
+; 13.358 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.583      ;
+; 13.358 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.583      ;
+; 13.358 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.583      ;
+; 13.359 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.582      ;
+; 13.362 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.579      ;
+; 13.362 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.579      ;
+; 13.368 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.573      ;
+; 13.368 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.573      ;
+; 13.368 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.573      ;
+; 13.369 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.572      ;
+; 13.394 ; main:main_inst|lp_inductionVar_stage0[27] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.552      ;
+; 13.396 ; main:main_inst|lp_inductionVar_stage0[24] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.550      ;
+; 13.399 ; main:main_inst|lp_valid_bit_0             ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.041     ; 1.547      ;
+; 13.402 ; main:main_inst|lp_inductionVar_stage0[19] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.544      ;
+; 13.406 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.535      ;
+; 13.406 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.535      ;
+; 13.407 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.534      ;
+; 13.407 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.534      ;
+; 13.417 ; main:main_inst|lp_inductionVar_stage0[28] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.041     ; 1.529      ;
+; 13.422 ; main:main_inst|lp_inductionVar_stage0[9]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.519      ;
+; 13.422 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.519      ;
+; 13.422 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.045     ; 1.520      ;
+; 13.423 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[23] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.518      ;
+; 13.426 ; main:main_inst|lp_inductionVar_stage0[9]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.515      ;
+; 13.426 ; main:main_inst|lp_inductionVar_stage0[7]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.515      ;
+; 13.426 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.515      ;
+; 13.426 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.515      ;
+; 13.427 ; main:main_inst|lp_inductionVar_stage0[1]  ; main:main_inst|lp_inductionVar_stage0[22] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.514      ;
+; 13.428 ; main:main_inst|lp_inductionVar_stage0[14] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.045     ; 1.514      ;
+; 13.430 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.511      ;
+; 13.430 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.511      ;
+; 13.432 ; main:main_inst|lp_inductionVar_stage0[21] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.041     ; 1.514      ;
+; 13.434 ; main:main_inst|lp_inductionVar_stage0[13] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.508      ;
+; 13.434 ; main:main_inst|lp_inductionVar_stage0[30] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.041     ; 1.512      ;
+; 13.435 ; main:main_inst|lp_inductionVar_stage0[5]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.507      ;
+; 13.436 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.505      ;
+; 13.436 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.505      ;
+; 13.436 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.505      ;
+; 13.436 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.505      ;
+; 13.437 ; main:main_inst|lp_inductionVar_stage0[0]  ; main:main_inst|lp_inductionVar_stage0[23] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.504      ;
+; 13.439 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.045     ; 1.503      ;
+; 13.443 ; main:main_inst|lp_inductionVar_stage0[9]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.499      ;
+; 13.455 ; main:main_inst|lp_inductionVar_stage0[23] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.041     ; 1.491      ;
+; 13.465 ; main:main_inst|lp_inductionVar_stage0[17] ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.041     ; 1.481      ;
+; 13.466 ; main:main_inst|lp_inductionVar_stage0[10] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.045     ; 1.476      ;
+; 13.468 ; main:main_inst|lp_inductionVar_stage0[3]  ; main:main_inst|lp_epilogue                ; clk          ; clk         ; 15.000       ; -0.045     ; 1.474      ;
+; 13.469 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.045     ; 1.473      ;
+; 13.473 ; main:main_inst|lp_inductionVar_stage0[15] ; main:main_inst|lp_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.045     ; 1.469      ;
+; 13.474 ; main:main_inst|lp_inductionVar_stage0[8]  ; main:main_inst|lp_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.467      ;
+; 13.474 ; main:main_inst|lp_inductionVar_stage0[4]  ; main:main_inst|lp_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.467      ;
+; 13.474 ; main:main_inst|lp_inductionVar_stage0[2]  ; main:main_inst|lp_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.467      ;
+; 13.475 ; main:main_inst|lp_inductionVar_stage0[6]  ; main:main_inst|lp_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.046     ; 1.466      ;
++--------+-------------------------------------------+-------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                                          ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.182 ; main:main_inst|finish                                        ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; main:main_inst|lp_epilogue                                   ; main:main_inst|lp_epilogue                                   ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; main:main_inst|lp_pipeline_finish_reg                        ; main:main_inst|lp_pipeline_finish_reg                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; main:main_inst|lp_active                                     ; main:main_inst|lp_active                                     ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|cur_state.LEGUP_0                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.307      ;
+; 0.192 ; main:main_inst|cur_state.LEGUP_pipeline_wait_lp_1            ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; clk          ; clk         ; 0.000        ; 0.041      ; 0.317      ;
+; 0.195 ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.320      ;
+; 0.256 ; main:main_inst|lp_pipeline_finish_reg                        ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; clk          ; clk         ; 0.000        ; 0.041      ; 0.381      ;
+; 0.297 ; main:main_inst|lp_inductionVar_stage0[15]                    ; main:main_inst|lp_inductionVar_stage0[15]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.423      ;
+; 0.298 ; main:main_inst|lp_inductionVar_stage0[13]                    ; main:main_inst|lp_inductionVar_stage0[13]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.298 ; main:main_inst|lp_inductionVar_stage0[31]                    ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.298 ; main:main_inst|lp_inductionVar_stage0[5]                     ; main:main_inst|lp_inductionVar_stage0[5]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.298 ; main:main_inst|lp_inductionVar_stage0[3]                     ; main:main_inst|lp_inductionVar_stage0[3]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[11]                    ; main:main_inst|lp_inductionVar_stage0[11]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[27]                    ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[29]                    ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[21]                    ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[19]                    ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[17]                    ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[7]                     ; main:main_inst|lp_inductionVar_stage0[7]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|lp_inductionVar_stage0[1]                     ; main:main_inst|lp_inductionVar_stage0[1]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[14]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[25]                    ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[23]                    ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[9]                     ; main:main_inst|lp_inductionVar_stage0[9]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.301 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|lp_inductionVar_stage0[30]                    ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|lp_inductionVar_stage0[24]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|lp_inductionVar_stage0[20]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[12]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|lp_inductionVar_stage0[10]                    ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.302 ; main:main_inst|lp_inductionVar_stage0[26]                    ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.428      ;
+; 0.302 ; main:main_inst|lp_inductionVar_stage0[28]                    ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.428      ;
+; 0.310 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[0]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.436      ;
+; 0.310 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_epilogue                                   ; clk          ; clk         ; 0.000        ; 0.041      ; 0.435      ;
+; 0.310 ; main:main_inst|cur_state.LEGUP_F_main_BB_sobel_filter_exit_2 ; main:main_inst|cur_state.LEGUP_0                             ; clk          ; clk         ; 0.000        ; 0.041      ; 0.435      ;
+; 0.321 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|finish                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.446      ;
+; 0.353 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|cur_state.LEGUP_pipeline_wait_lp_1            ; clk          ; clk         ; 0.000        ; 0.041      ; 0.478      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.405 ; main:main_inst|lp_valid_bit_0                                ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.041      ; 0.530      ;
+; 0.447 ; main:main_inst|lp_inductionVar_stage0[5]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.573      ;
+; 0.447 ; main:main_inst|lp_inductionVar_stage0[13]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.573      ;
+; 0.447 ; main:main_inst|lp_inductionVar_stage0[3]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.573      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[21]                    ; main:main_inst|lp_inductionVar_stage0[22]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[7]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[1]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[29]                    ; main:main_inst|lp_inductionVar_stage0[30]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[19]                    ; main:main_inst|lp_inductionVar_stage0[20]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[17]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[11]                    ; main:main_inst|lp_inductionVar_stage0[12]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|lp_inductionVar_stage0[27]                    ; main:main_inst|lp_inductionVar_stage0[28]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.449 ; main:main_inst|lp_inductionVar_stage0[23]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.575      ;
+; 0.449 ; main:main_inst|lp_inductionVar_stage0[9]                     ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.575      ;
+; 0.449 ; main:main_inst|lp_inductionVar_stage0[25]                    ; main:main_inst|lp_inductionVar_stage0[26]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.575      ;
+; 0.450 ; main:main_inst|lp_inductionVar_stage0[15]                    ; main:main_inst|lp_inductionVar_stage0[16]                    ; clk          ; clk         ; 0.000        ; 0.038      ; 0.572      ;
+; 0.456 ; main:main_inst|cur_state.LEGUP_0                             ; main:main_inst|lp_valid_bit_0                                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.581      ;
+; 0.457 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[7]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.583      ;
+; 0.457 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[1]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.583      ;
+; 0.458 ; main:main_inst|lp_inductionVar_stage0[14]                    ; main:main_inst|lp_inductionVar_stage0[15]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[3]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[17]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[23]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[9]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.459 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[13]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.459 ; main:main_inst|lp_inductionVar_stage0[30]                    ; main:main_inst|lp_inductionVar_stage0[31]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.459 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[5]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.459 ; main:main_inst|lp_inductionVar_stage0[10]                    ; main:main_inst|lp_inductionVar_stage0[11]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.459 ; main:main_inst|lp_inductionVar_stage0[20]                    ; main:main_inst|lp_inductionVar_stage0[21]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.459 ; main:main_inst|lp_inductionVar_stage0[18]                    ; main:main_inst|lp_inductionVar_stage0[19]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.459 ; main:main_inst|lp_inductionVar_stage0[24]                    ; main:main_inst|lp_inductionVar_stage0[25]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.460 ; main:main_inst|lp_inductionVar_stage0[26]                    ; main:main_inst|lp_inductionVar_stage0[27]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.586      ;
+; 0.460 ; main:main_inst|lp_inductionVar_stage0[28]                    ; main:main_inst|lp_inductionVar_stage0[29]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.586      ;
+; 0.460 ; main:main_inst|lp_inductionVar_stage0[6]                     ; main:main_inst|lp_inductionVar_stage0[8]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.586      ;
+; 0.460 ; main:main_inst|lp_inductionVar_stage0[0]                     ; main:main_inst|lp_inductionVar_stage0[2]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.586      ;
+; 0.461 ; main:main_inst|lp_inductionVar_stage0[2]                     ; main:main_inst|lp_inductionVar_stage0[4]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.587      ;
+; 0.461 ; main:main_inst|lp_inductionVar_stage0[16]                    ; main:main_inst|lp_inductionVar_stage0[18]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.587      ;
+; 0.461 ; main:main_inst|lp_inductionVar_stage0[22]                    ; main:main_inst|lp_inductionVar_stage0[24]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.587      ;
+; 0.461 ; main:main_inst|lp_inductionVar_stage0[8]                     ; main:main_inst|lp_inductionVar_stage0[10]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.587      ;
+; 0.462 ; main:main_inst|lp_inductionVar_stage0[4]                     ; main:main_inst|lp_inductionVar_stage0[6]                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.588      ;
+; 0.462 ; main:main_inst|lp_inductionVar_stage0[12]                    ; main:main_inst|lp_inductionVar_stage0[14]                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.588      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 10.639 ; 0.182 ; N/A      ; N/A     ; 7.103               ;
+;  clk             ; 10.639 ; 0.182 ; N/A      ; N/A     ; 7.103               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 752      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 752      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 76    ; 76   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; finish      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; finish      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon May 06 09:30:18 2019
+Info: Command: quartus_sta top -c top
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (332104): Reading SDC File: 'Test4.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 10.639
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    10.639               0.000 clk 
+Info (332146): Worst-case hold slack is 0.444
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.444               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.139
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.139               0.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 11.002
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    11.002               0.000 clk 
+Info (332146): Worst-case hold slack is 0.393
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.393               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.103
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.103               0.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 13.144
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    13.144               0.000 clk 
+Info (332146): Worst-case hold slack is 0.182
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.182               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.293
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.293               0.000 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Mon May 06 09:30:21 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

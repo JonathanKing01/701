@@ -1,0 +1,85 @@
+// ----------------------------------------------------------------------------
+// LegUp High-Level Synthesis Tool Version 7.0 (http://legupcomputing.com)
+// Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
+// For technical issues, please contact: support@legupcomputing.com
+// For general inquiries, please contact: info@legupcomputing.com
+// Date: Mon May  6 09:14:11 2019
+// ----------------------------------------------------------------------------
+Found Loop: Loop at depth 1 containing: %for.body.i<header><latch><exiting>
+
+Label: loop
+ID: main_for_body_i
+Trip count: 1584
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Scheduled.
+MII = 1
+II = 1
+Final Pipeline Schedule:
+Total pipeline stages: 1
+Stage: 0
+Time: 0 Stage: 0 instr:   %k.0404.i = phi i32 [ 0, %entry ], [ %3, %for.body.i ], !dbg !132, !legup.canonical_induction !133
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([5 x i8]* @.str, i32 0, i32 0)) #2, !dbg !134
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !136
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   tail call void @__legup_label(i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0)) #2, !dbg !138
+Time: 0 Stage: 0 instr:   %3 = add nsw i32 %k.0404.i, 1, !dbg !140
+Time: 0 Stage: 0 instr:   %exitcond17 = icmp eq i32 %3, 1584, !dbg !129
+Time: 0 Stage: 0 instr:   br i1 %exitcond17, label %for.cond2.preheader.preheader, label %for.body.i, !dbg !129
+
+
+Pipeline Table:
+Total pipeline stages: 1
+Stage:        0
+   II:        0
+ Time:        0
+      %k.0404.i
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+       <badref>
+             %3
+    %exitcond17
+       <badref>
+

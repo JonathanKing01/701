@@ -1,0 +1,15 @@
+Depth = 8;
+Width = 32;
+Address_radix = dec;
+Data_radix = bin;
+Content
+Begin
+0: 10000;	-- main_in_a1_a0[0] = 16
+1: 11000;	-- main_in_a1_a0[1] = 24
+2: 1100;	-- main_in_a1_a0[2] = 12
+3: 10011;	-- main_in_a1_a0[3] = 19
+4: 1100;	-- main_in_a1_a0[4] = 12
+5: 10100;	-- main_in_a1_a0[5] = 20
+6: 100111;	-- main_in_a1_a0[6] = 39
+7: 110011;	-- main_in_a1_a0[7] = 51
+End;

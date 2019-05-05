@@ -1,0 +1,31 @@
+Software results
+
+YCrCb:
+	400 tests
+	8969 ms total
+	22.4225 ms av case
+	44 fps obtainable
+
+DCT:
+	400 tests
+	296 ms total 
+	0.74 ms av case
+	1351 fps obtainable
+
+Combined total: 23.1625 ms, Obtainable fps: 43.17
+
+Hardware results
+
+YCrCb:
+	1 test
+	7130 ns total
+	7130 ns av case
+	140252 fps obtainable
+
+DCT:
+	1 test
+	32330 ns total 
+	32330 ns av case
+	30931 fps obtainable	
+
+Combined total: 39460 ns, Obtainable fps: 25342

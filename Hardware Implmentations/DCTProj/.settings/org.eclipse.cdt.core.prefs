@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+environment/project/legup.managedbuild.config.gnu.exe.debug.154078559/PATH/delimiter=;
+environment/project/legup.managedbuild.config.gnu.exe.debug.154078559/PATH/operation=replace
+environment/project/legup.managedbuild.config.gnu.exe.debug.154078559/PATH/value=${LEGUP_CYGWIN_BIN};${PATH}
+environment/project/legup.managedbuild.config.gnu.exe.debug.154078559/append=true
+environment/project/legup.managedbuild.config.gnu.exe.debug.154078559/appendContributed=true
+environment/project/legup.managedbuild.config.gnu.exe.release.168401645/PATH/delimiter=;
+environment/project/legup.managedbuild.config.gnu.exe.release.168401645/PATH/operation=replace
+environment/project/legup.managedbuild.config.gnu.exe.release.168401645/PATH/value=${LEGUP_CYGWIN_BIN};${PATH}
+environment/project/legup.managedbuild.config.gnu.exe.release.168401645/append=true
+environment/project/legup.managedbuild.config.gnu.exe.release.168401645/appendContributed=true

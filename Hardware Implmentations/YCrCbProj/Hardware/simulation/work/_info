@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/LegUp-7.0/workspace/Test4/Hardware/simulation
+vmain
+Z1 !s110 1557091477
+!i10b 1
+!s100 C5[?L>zzbGDfKcMa^FlE32
+IdcCF_lo_6InZW@_VU4DB71
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1557005734
+Z4 8../Test4.v
+Z5 F../Test4.v
+L0 81
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1557091477.000000
+Z8 !s107 ../Test4.v|
+Z9 !s90 ../Test4.v|
+!s101 -O0
+!i113 1
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vmain_tb
+R1
+!i10b 1
+!s100 e3JmnDje[zhS^He[f5iYL2
+Io>RY[SzTfboBXk1?1il[^0
+R2
+R0
+R3
+R4
+R5
+L0 360
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vram_dual_port
+R1
+!i10b 1
+!s100 lYBlhBVh?C[AkXTL?KcN62
+IIdnYh9LZB=@TeN326MFYm0
+R2
+R0
+R3
+R4
+R5
+L0 256
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vtop
+R1
+!i10b 1
+!s100 ]gmRIIDVLF63PST2nn0Y:2
+IcM<>GdHda7fUU0P^DP??N3
+R2
+R0
+R3
+R4
+R5
+L0 14
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10

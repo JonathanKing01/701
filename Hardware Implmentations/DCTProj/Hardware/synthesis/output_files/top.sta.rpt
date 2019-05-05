@@ -1,0 +1,1164 @@
+Timing Analyzer report for top
+Mon May 06 09:17:14 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'clk'
+ 14. Slow 1200mV 85C Model Hold: 'clk'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'clk'
+ 23. Slow 1200mV 0C Model Hold: 'clk'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'clk'
+ 31. Fast 1200mV 0C Model Hold: 'clk'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; top                                                 ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C8                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; DCT.sdc       ; OK     ; Mon May 06 09:17:13 2019 ;
++---------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                         ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 15.000 ; 66.67 MHz ; 0.000 ; 7.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 192.86 MHz ; 192.86 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 9.815 ; 0.000               ;
++-------+-------+---------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.442 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; clk   ; 7.200 ; 0.000                             ;
++-------+-------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                       ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 9.815  ; main:main_inst|loop_valid_bit_0             ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.092     ; 5.094      ;
+; 10.165 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.742      ;
+; 10.187 ; main:main_inst|loop_valid_bit_0             ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.092     ; 4.722      ;
+; 10.352 ; main:main_inst|loop_inductionVar_stage0[12] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.555      ;
+; 10.434 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.473      ;
+; 10.500 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.407      ;
+; 10.534 ; main:main_inst|loop_inductionVar_stage0[14] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.373      ;
+; 10.537 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 4.370      ;
+; 10.653 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.254      ;
+; 10.662 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.245      ;
+; 10.724 ; main:main_inst|loop_inductionVar_stage0[12] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 4.183      ;
+; 10.731 ; main:main_inst|loop_inductionVar_stage0[13] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.176      ;
+; 10.732 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.175      ;
+; 10.733 ; main:main_inst|loop_inductionVar_stage0[10] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.174      ;
+; 10.740 ; main:main_inst|loop_inductionVar_stage0[22] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.167      ;
+; 10.775 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.132      ;
+; 10.800 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.107      ;
+; 10.806 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 4.101      ;
+; 10.821 ; main:main_inst|loop_inductionVar_stage0[26] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.086      ;
+; 10.832 ; main:main_inst|loop_inductionVar_stage0[17] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.075      ;
+; 10.864 ; main:main_inst|loop_inductionVar_stage0[23] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.043      ;
+; 10.868 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 4.041      ;
+; 10.872 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 4.035      ;
+; 10.891 ; main:main_inst|loop_inductionVar_stage0[18] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.016      ;
+; 10.900 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 4.009      ;
+; 10.900 ; main:main_inst|loop_inductionVar_stage0[11] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 4.007      ;
+; 10.906 ; main:main_inst|loop_inductionVar_stage0[14] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 4.001      ;
+; 10.912 ; main:main_inst|loop_inductionVar_stage0[8]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.995      ;
+; 10.919 ; main:main_inst|loop_inductionVar_stage0[30] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.988      ;
+; 10.930 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.979      ;
+; 10.942 ; main:main_inst|loop_inductionVar_stage0[21] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.965      ;
+; 10.989 ; main:main_inst|loop_inductionVar_stage0[15] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.918      ;
+; 10.998 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.911      ;
+; 11.013 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.896      ;
+; 11.014 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.895      ;
+; 11.025 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.882      ;
+; 11.034 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.873      ;
+; 11.046 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.863      ;
+; 11.048 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.861      ;
+; 11.058 ; main:main_inst|loop_inductionVar_stage0[9]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.849      ;
+; 11.064 ; main:main_inst|loop_inductionVar_stage0[16] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.843      ;
+; 11.076 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.833      ;
+; 11.078 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.831      ;
+; 11.089 ; main:main_inst|loop_inductionVar_stage0[24] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.818      ;
+; 11.103 ; main:main_inst|loop_inductionVar_stage0[13] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.804      ;
+; 11.104 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.803      ;
+; 11.105 ; main:main_inst|loop_inductionVar_stage0[10] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.802      ;
+; 11.112 ; main:main_inst|loop_inductionVar_stage0[28] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.795      ;
+; 11.121 ; main:main_inst|loop_inductionVar_stage0[22] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.786      ;
+; 11.143 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.766      ;
+; 11.144 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.765      ;
+; 11.147 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.760      ;
+; 11.159 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.750      ;
+; 11.159 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.750      ;
+; 11.160 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.749      ;
+; 11.172 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.735      ;
+; 11.192 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.717      ;
+; 11.193 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.716      ;
+; 11.194 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.715      ;
+; 11.197 ; main:main_inst|loop_inductionVar_stage0[19] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.710      ;
+; 11.202 ; main:main_inst|loop_inductionVar_stage0[26] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.705      ;
+; 11.213 ; main:main_inst|loop_inductionVar_stage0[17] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.694      ;
+; 11.222 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.687      ;
+; 11.223 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.686      ;
+; 11.224 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.685      ;
+; 11.232 ; main:main_inst|loop_inductionVar_stage0[25] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.675      ;
+; 11.245 ; main:main_inst|loop_inductionVar_stage0[23] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.662      ;
+; 11.263 ; main:main_inst|loop_inductionVar_stage0[18] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.644      ;
+; 11.272 ; main:main_inst|loop_inductionVar_stage0[11] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.635      ;
+; 11.284 ; main:main_inst|loop_inductionVar_stage0[8]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.623      ;
+; 11.288 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.621      ;
+; 11.289 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.620      ;
+; 11.290 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.619      ;
+; 11.291 ; main:main_inst|loop_inductionVar_stage0[30] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.616      ;
+; 11.305 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.604      ;
+; 11.305 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.604      ;
+; 11.306 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.603      ;
+; 11.307 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.602      ;
+; 11.314 ; main:main_inst|loop_inductionVar_stage0[29] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.593      ;
+; 11.323 ; main:main_inst|loop_inductionVar_stage0[21] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.584      ;
+; 11.333 ; main:main_inst|loop_inductionVar_stage0[20] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.094     ; 3.574      ;
+; 11.335 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.574      ;
+; 11.338 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.571      ;
+; 11.339 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.570      ;
+; 11.340 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.569      ;
+; 11.365 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.544      ;
+; 11.365 ; main:main_inst|loop_inductionVar_stage0[15] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.542      ;
+; 11.368 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.541      ;
+; 11.369 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.540      ;
+; 11.370 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.539      ;
+; 11.426 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.483      ;
+; 11.430 ; main:main_inst|loop_inductionVar_stage0[9]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.477      ;
+; 11.434 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.475      ;
+; 11.435 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.474      ;
+; 11.436 ; main:main_inst|loop_inductionVar_stage0[16] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.094     ; 3.471      ;
+; 11.436 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.473      ;
+; 11.450 ; main:main_inst|loop_inductionVar_stage0[8]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.459      ;
+; 11.451 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.458      ;
+; 11.451 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.458      ;
+; 11.452 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[23] ; clk          ; clk         ; 15.000       ; -0.092     ; 3.457      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                                                                                                           ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                     ; To Node                                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.442 ; main:main_inst|finish                                                                         ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.092      ; 0.746      ;
+; 0.442 ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; clk          ; clk         ; 0.000        ; 0.092      ; 0.746      ;
+; 0.442 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 0.746      ;
+; 0.442 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|cur_state.LEGUP_0                                                              ; clk          ; clk         ; 0.000        ; 0.092      ; 0.746      ;
+; 0.442 ; main:main_inst|loop_epilogue                                                                  ; main:main_inst|loop_epilogue                                                                  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.746      ;
+; 0.506 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_pipeline_finish_reg                                                       ; clk          ; clk         ; 0.000        ; 0.092      ; 0.810      ;
+; 0.542 ; main:main_inst|loop_valid_bit_0                                                               ; main:main_inst|loop_epilogue                                                                  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.846      ;
+; 0.630 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_6                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; clk          ; clk         ; 0.000        ; 0.092      ; 0.934      ;
+; 0.643 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_10 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; clk          ; clk         ; 0.000        ; 0.092      ; 0.947      ;
+; 0.678 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.092      ; 0.982      ;
+; 0.685 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.091      ; 0.988      ;
+; 0.729 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_5                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_6                      ; clk          ; clk         ; 0.000        ; 0.092      ; 1.033      ;
+; 0.729 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_3                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_4                      ; clk          ; clk         ; 0.000        ; 0.092      ; 1.033      ;
+; 0.731 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_4                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_5                      ; clk          ; clk         ; 0.000        ; 0.092      ; 1.035      ;
+; 0.747 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; clk          ; clk         ; 0.000        ; 0.093      ; 1.052      ;
+; 0.747 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; clk          ; clk         ; 0.000        ; 0.093      ; 1.052      ;
+; 0.749 ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.053      ;
+; 0.749 ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.053      ;
+; 0.750 ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.054      ;
+; 0.750 ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.054      ;
+; 0.750 ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.054      ;
+; 0.750 ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.054      ;
+; 0.750 ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.054      ;
+; 0.751 ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_3                      ; clk          ; clk         ; 0.000        ; 0.092      ; 1.055      ;
+; 0.751 ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.055      ;
+; 0.751 ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.055      ;
+; 0.751 ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.055      ;
+; 0.751 ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.055      ;
+; 0.751 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; clk          ; clk         ; 0.000        ; 0.093      ; 1.056      ;
+; 0.752 ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.056      ;
+; 0.752 ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.056      ;
+; 0.752 ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.056      ;
+; 0.752 ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.056      ;
+; 0.752 ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.056      ;
+; 0.752 ; main:main_inst|loop_inductionVar_stage0[31]                                                   ; main:main_inst|loop_inductionVar_stage0[31]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.056      ;
+; 0.752 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; clk          ; clk         ; 0.000        ; 0.093      ; 1.057      ;
+; 0.753 ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.057      ;
+; 0.753 ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.057      ;
+; 0.753 ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.057      ;
+; 0.753 ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.057      ;
+; 0.753 ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.057      ;
+; 0.753 ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.057      ;
+; 0.753 ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.057      ;
+; 0.753 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.058      ;
+; 0.754 ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.058      ;
+; 0.754 ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.058      ;
+; 0.754 ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.058      ;
+; 0.754 ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.058      ;
+; 0.754 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.059      ;
+; 0.755 ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.059      ;
+; 0.755 ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.059      ;
+; 0.755 ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.059      ;
+; 0.755 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.060      ;
+; 0.759 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[0]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.064      ;
+; 0.763 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.092      ; 1.067      ;
+; 0.775 ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.079      ;
+; 0.775 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; clk          ; clk         ; 0.000        ; 0.092      ; 1.079      ;
+; 0.780 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; clk          ; clk         ; 0.000        ; 0.092      ; 1.084      ;
+; 0.785 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.092      ; 1.089      ;
+; 0.788 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; clk          ; clk         ; 0.000        ; 0.092      ; 1.092      ;
+; 0.803 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_9  ; clk          ; clk         ; 0.000        ; 0.092      ; 1.107      ;
+; 0.805 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_9  ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_10 ; clk          ; clk         ; 0.000        ; 0.092      ; 1.109      ;
+; 0.846 ; main:main_inst|loop_epilogue                                                                  ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.092      ; 1.150      ;
+; 0.880 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_pipeline_finish_reg                                                       ; clk          ; clk         ; 0.000        ; 0.092      ; 1.184      ;
+; 0.931 ; main:main_inst|loop_valid_bit_0                                                               ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.235      ;
+; 0.948 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; main:main_inst|cur_state.LEGUP_0                                                              ; clk          ; clk         ; 0.000        ; 0.091      ; 1.251      ;
+; 0.965 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; clk          ; clk         ; 0.000        ; 0.091      ; 1.268      ;
+; 0.970 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.275      ;
+; 0.979 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; clk          ; clk         ; 0.000        ; 0.091      ; 1.282      ;
+; 0.990 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.295      ;
+; 1.014 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.318      ;
+; 1.019 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; clk          ; clk         ; 0.000        ; 0.091      ; 1.322      ;
+; 1.023 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[0]                 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; clk          ; clk         ; 0.000        ; 0.091      ; 1.326      ;
+; 1.035 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.340      ;
+; 1.040 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.345      ;
+; 1.053 ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.358      ;
+; 1.061 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; clk          ; clk         ; 0.000        ; 0.093      ; 1.366      ;
+; 1.088 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; clk          ; clk         ; 0.000        ; 0.093      ; 1.393      ;
+; 1.104 ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.408      ;
+; 1.104 ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.408      ;
+; 1.104 ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.408      ;
+; 1.105 ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.409      ;
+; 1.105 ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.409      ;
+; 1.105 ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.409      ;
+; 1.105 ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.409      ;
+; 1.105 ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.409      ;
+; 1.106 ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.410      ;
+; 1.106 ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.410      ;
+; 1.106 ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.410      ;
+; 1.106 ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.410      ;
+; 1.106 ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.410      ;
+; 1.107 ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.411      ;
+; 1.107 ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.411      ;
+; 1.113 ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.417      ;
+; 1.113 ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.417      ;
+; 1.113 ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.417      ;
+; 1.113 ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.417      ;
+; 1.114 ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.418      ;
+; 1.114 ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; clk          ; clk         ; 0.000        ; 0.092      ; 1.418      ;
+; 1.114 ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; clk          ; clk         ; 0.000        ; 0.092      ; 1.418      ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 202.55 MHz ; 202.55 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; 10.063 ; 0.000             ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.392 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 7.184 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 10.063 ; main:main_inst|loop_valid_bit_0             ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.082     ; 4.857      ;
+; 10.414 ; main:main_inst|loop_valid_bit_0             ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.082     ; 4.506      ;
+; 10.481 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 4.436      ;
+; 10.647 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 4.270      ;
+; 10.650 ; main:main_inst|loop_inductionVar_stage0[12] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 4.267      ;
+; 10.711 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 4.206      ;
+; 10.813 ; main:main_inst|loop_inductionVar_stage0[14] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 4.104      ;
+; 10.832 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 4.085      ;
+; 10.863 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 4.054      ;
+; 10.866 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 4.051      ;
+; 10.924 ; main:main_inst|loop_inductionVar_stage0[10] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.993      ;
+; 10.965 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.952      ;
+; 10.979 ; main:main_inst|loop_inductionVar_stage0[13] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.938      ;
+; 10.991 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.926      ;
+; 10.998 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.919      ;
+; 11.001 ; main:main_inst|loop_inductionVar_stage0[12] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.916      ;
+; 11.042 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.875      ;
+; 11.062 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.855      ;
+; 11.080 ; main:main_inst|loop_inductionVar_stage0[22] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.838      ;
+; 11.132 ; main:main_inst|loop_inductionVar_stage0[11] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.785      ;
+; 11.141 ; main:main_inst|loop_inductionVar_stage0[8]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.776      ;
+; 11.146 ; main:main_inst|loop_inductionVar_stage0[17] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.772      ;
+; 11.158 ; main:main_inst|loop_inductionVar_stage0[26] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.760      ;
+; 11.164 ; main:main_inst|loop_inductionVar_stage0[14] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.753      ;
+; 11.174 ; main:main_inst|loop_inductionVar_stage0[23] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.744      ;
+; 11.178 ; main:main_inst|loop_inductionVar_stage0[18] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.740      ;
+; 11.210 ; main:main_inst|loop_inductionVar_stage0[30] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.708      ;
+; 11.214 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.703      ;
+; 11.217 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.700      ;
+; 11.232 ; main:main_inst|loop_inductionVar_stage0[9]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.685      ;
+; 11.242 ; main:main_inst|loop_inductionVar_stage0[21] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.676      ;
+; 11.261 ; main:main_inst|loop_inductionVar_stage0[15] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.085     ; 3.656      ;
+; 11.275 ; main:main_inst|loop_inductionVar_stage0[10] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.642      ;
+; 11.316 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.601      ;
+; 11.325 ; main:main_inst|loop_inductionVar_stage0[16] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.593      ;
+; 11.330 ; main:main_inst|loop_inductionVar_stage0[13] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.587      ;
+; 11.339 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.579      ;
+; 11.342 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.575      ;
+; 11.352 ; main:main_inst|loop_inductionVar_stage0[24] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.566      ;
+; 11.385 ; main:main_inst|loop_inductionVar_stage0[28] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.533      ;
+; 11.386 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.532      ;
+; 11.393 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.524      ;
+; 11.425 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.493      ;
+; 11.429 ; main:main_inst|loop_inductionVar_stage0[22] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.489      ;
+; 11.444 ; main:main_inst|loop_inductionVar_stage0[19] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.474      ;
+; 11.464 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.454      ;
+; 11.465 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.453      ;
+; 11.476 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.442      ;
+; 11.480 ; main:main_inst|loop_inductionVar_stage0[25] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.438      ;
+; 11.483 ; main:main_inst|loop_inductionVar_stage0[11] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.434      ;
+; 11.492 ; main:main_inst|loop_inductionVar_stage0[8]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.425      ;
+; 11.497 ; main:main_inst|loop_inductionVar_stage0[17] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.421      ;
+; 11.509 ; main:main_inst|loop_inductionVar_stage0[26] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.409      ;
+; 11.512 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.406      ;
+; 11.515 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.403      ;
+; 11.525 ; main:main_inst|loop_inductionVar_stage0[23] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.393      ;
+; 11.529 ; main:main_inst|loop_inductionVar_stage0[18] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.389      ;
+; 11.551 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.367      ;
+; 11.554 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.364      ;
+; 11.555 ; main:main_inst|loop_inductionVar_stage0[29] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.363      ;
+; 11.561 ; main:main_inst|loop_inductionVar_stage0[30] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.357      ;
+; 11.572 ; main:main_inst|loop_inductionVar_stage0[20] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.346      ;
+; 11.583 ; main:main_inst|loop_inductionVar_stage0[9]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.334      ;
+; 11.590 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.328      ;
+; 11.590 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.328      ;
+; 11.591 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.327      ;
+; 11.593 ; main:main_inst|loop_inductionVar_stage0[21] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.325      ;
+; 11.601 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.317      ;
+; 11.602 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.316      ;
+; 11.612 ; main:main_inst|loop_inductionVar_stage0[15] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.085     ; 3.305      ;
+; 11.638 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.280      ;
+; 11.640 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.278      ;
+; 11.641 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.277      ;
+; 11.676 ; main:main_inst|loop_inductionVar_stage0[16] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.242      ;
+; 11.677 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.241      ;
+; 11.679 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.239      ;
+; 11.680 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.238      ;
+; 11.703 ; main:main_inst|loop_inductionVar_stage0[24] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.215      ;
+; 11.707 ; main:main_inst|loop_inductionVar_stage0[27] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.084     ; 3.211      ;
+; 11.716 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.202      ;
+; 11.716 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.202      ;
+; 11.717 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.201      ;
+; 11.720 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.198      ;
+; 11.727 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.191      ;
+; 11.727 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.191      ;
+; 11.728 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.190      ;
+; 11.736 ; main:main_inst|loop_inductionVar_stage0[28] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.182      ;
+; 11.762 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.156      ;
+; 11.764 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.154      ;
+; 11.766 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.152      ;
+; 11.767 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.151      ;
+; 11.795 ; main:main_inst|loop_inductionVar_stage0[19] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.123      ;
+; 11.801 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.117      ;
+; 11.803 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.115      ;
+; 11.805 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.113      ;
+; 11.806 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.112      ;
+; 11.831 ; main:main_inst|loop_inductionVar_stage0[25] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.084     ; 3.087      ;
+; 11.841 ; main:main_inst|loop_inductionVar_stage0[8]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.077      ;
+; 11.842 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.076      ;
+; 11.842 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.084     ; 3.076      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                                                                                                            ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                     ; To Node                                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.392 ; main:main_inst|finish                                                                         ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.082      ; 0.669      ;
+; 0.392 ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; clk          ; clk         ; 0.000        ; 0.082      ; 0.669      ;
+; 0.392 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 0.669      ;
+; 0.392 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|cur_state.LEGUP_0                                                              ; clk          ; clk         ; 0.000        ; 0.082      ; 0.669      ;
+; 0.392 ; main:main_inst|loop_epilogue                                                                  ; main:main_inst|loop_epilogue                                                                  ; clk          ; clk         ; 0.000        ; 0.082      ; 0.669      ;
+; 0.478 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_pipeline_finish_reg                                                       ; clk          ; clk         ; 0.000        ; 0.082      ; 0.755      ;
+; 0.504 ; main:main_inst|loop_valid_bit_0                                                               ; main:main_inst|loop_epilogue                                                                  ; clk          ; clk         ; 0.000        ; 0.082      ; 0.781      ;
+; 0.589 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_6                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.866      ;
+; 0.599 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_10 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; clk          ; clk         ; 0.000        ; 0.083      ; 0.877      ;
+; 0.607 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.082      ; 0.884      ;
+; 0.634 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.082      ; 0.911      ;
+; 0.672 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 0.951      ;
+; 0.673 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 0.952      ;
+; 0.674 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 0.953      ;
+; 0.680 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_5                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_6                      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.957      ;
+; 0.680 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_4                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_5                      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.957      ;
+; 0.680 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_3                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_4                      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.957      ;
+; 0.694 ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.972      ;
+; 0.694 ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.972      ;
+; 0.694 ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.972      ;
+; 0.694 ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.972      ;
+; 0.695 ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.973      ;
+; 0.695 ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.973      ;
+; 0.695 ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.973      ;
+; 0.695 ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.973      ;
+; 0.696 ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.974      ;
+; 0.696 ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.974      ;
+; 0.696 ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.974      ;
+; 0.697 ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.975      ;
+; 0.697 ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.975      ;
+; 0.697 ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.975      ;
+; 0.697 ; main:main_inst|loop_inductionVar_stage0[31]                                                   ; main:main_inst|loop_inductionVar_stage0[31]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.975      ;
+; 0.698 ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.976      ;
+; 0.698 ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.976      ;
+; 0.698 ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.976      ;
+; 0.699 ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.977      ;
+; 0.699 ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.977      ;
+; 0.699 ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.977      ;
+; 0.700 ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.978      ;
+; 0.700 ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.978      ;
+; 0.700 ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.978      ;
+; 0.700 ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.978      ;
+; 0.701 ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 0.979      ;
+; 0.701 ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.979      ;
+; 0.701 ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.979      ;
+; 0.701 ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.979      ;
+; 0.701 ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.979      ;
+; 0.702 ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 0.980      ;
+; 0.704 ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_3                      ; clk          ; clk         ; 0.000        ; 0.082      ; 0.981      ;
+; 0.709 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; clk          ; clk         ; 0.000        ; 0.083      ; 0.987      ;
+; 0.710 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; clk          ; clk         ; 0.000        ; 0.083      ; 0.988      ;
+; 0.715 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; clk          ; clk         ; 0.000        ; 0.083      ; 0.993      ;
+; 0.715 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; clk          ; clk         ; 0.000        ; 0.083      ; 0.993      ;
+; 0.716 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.082      ; 0.993      ;
+; 0.718 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[0]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 0.997      ;
+; 0.720 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; clk          ; clk         ; 0.000        ; 0.082      ; 0.997      ;
+; 0.722 ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.000      ;
+; 0.727 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; clk          ; clk         ; 0.000        ; 0.082      ; 1.004      ;
+; 0.731 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.082      ; 1.008      ;
+; 0.734 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; clk          ; clk         ; 0.000        ; 0.083      ; 1.012      ;
+; 0.746 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_9  ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_10 ; clk          ; clk         ; 0.000        ; 0.083      ; 1.024      ;
+; 0.753 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_9  ; clk          ; clk         ; 0.000        ; 0.083      ; 1.031      ;
+; 0.793 ; main:main_inst|loop_epilogue                                                                  ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.082      ; 1.070      ;
+; 0.823 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_pipeline_finish_reg                                                       ; clk          ; clk         ; 0.000        ; 0.082      ; 1.100      ;
+; 0.852 ; main:main_inst|loop_valid_bit_0                                                               ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.129      ;
+; 0.866 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; main:main_inst|cur_state.LEGUP_0                                                              ; clk          ; clk         ; 0.000        ; 0.082      ; 1.143      ;
+; 0.879 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; clk          ; clk         ; 0.000        ; 0.082      ; 1.156      ;
+; 0.883 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 1.162      ;
+; 0.884 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; clk          ; clk         ; 0.000        ; 0.082      ; 1.161      ;
+; 0.905 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; clk          ; clk         ; 0.000        ; 0.082      ; 1.182      ;
+; 0.909 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[0]                 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; clk          ; clk         ; 0.000        ; 0.082      ; 1.186      ;
+; 0.912 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 1.191      ;
+; 0.925 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 1.204      ;
+; 0.945 ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 1.224      ;
+; 0.946 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.082      ; 1.223      ;
+; 0.949 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 1.228      ;
+; 0.951 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.084      ; 1.230      ;
+; 0.994 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; clk          ; clk         ; 0.000        ; 0.083      ; 1.272      ;
+; 1.016 ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.294      ;
+; 1.016 ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.294      ;
+; 1.016 ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.294      ;
+; 1.016 ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.294      ;
+; 1.016 ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.294      ;
+; 1.016 ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.294      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.295      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.295      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.295      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.295      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; clk          ; clk         ; 0.000        ; 0.082      ; 1.294      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.295      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.295      ;
+; 1.017 ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.295      ;
+; 1.018 ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; clk          ; clk         ; 0.000        ; 0.083      ; 1.296      ;
+; 1.018 ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.296      ;
+; 1.018 ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.296      ;
+; 1.018 ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.296      ;
+; 1.018 ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.296      ;
+; 1.018 ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.296      ;
+; 1.019 ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.297      ;
+; 1.019 ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; clk          ; clk         ; 0.000        ; 0.083      ; 1.297      ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; 12.646 ; 0.000             ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.181 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 7.291 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 12.646 ; main:main_inst|loop_valid_bit_0             ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.042     ; 2.299      ;
+; 12.822 ; main:main_inst|loop_valid_bit_0             ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.042     ; 2.123      ;
+; 12.908 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 2.036      ;
+; 12.984 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.960      ;
+; 12.990 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.954      ;
+; 13.004 ; main:main_inst|loop_inductionVar_stage0[12] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.940      ;
+; 13.066 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.878      ;
+; 13.070 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.874      ;
+; 13.084 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.860      ;
+; 13.085 ; main:main_inst|loop_inductionVar_stage0[14] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.859      ;
+; 13.128 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.816      ;
+; 13.145 ; main:main_inst|loop_inductionVar_stage0[10] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.799      ;
+; 13.155 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.790      ;
+; 13.159 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.786      ;
+; 13.160 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.784      ;
+; 13.166 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.778      ;
+; 13.169 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.776      ;
+; 13.172 ; main:main_inst|loop_inductionVar_stage0[13] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.772      ;
+; 13.177 ; main:main_inst|loop_inductionVar_stage0[22] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.767      ;
+; 13.180 ; main:main_inst|loop_inductionVar_stage0[12] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.764      ;
+; 13.183 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.761      ;
+; 13.192 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.752      ;
+; 13.197 ; main:main_inst|loop_inductionVar_stage0[17] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.747      ;
+; 13.200 ; main:main_inst|loop_inductionVar_stage0[26] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.744      ;
+; 13.207 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.738      ;
+; 13.212 ; main:main_inst|loop_inductionVar_stage0[23] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.732      ;
+; 13.213 ; main:main_inst|loop_inductionVar_stage0[18] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.731      ;
+; 13.223 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.722      ;
+; 13.226 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.719      ;
+; 13.227 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.718      ;
+; 13.230 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.715      ;
+; 13.236 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.709      ;
+; 13.237 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.708      ;
+; 13.242 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.702      ;
+; 13.242 ; main:main_inst|loop_inductionVar_stage0[11] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.702      ;
+; 13.246 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.698      ;
+; 13.248 ; main:main_inst|loop_inductionVar_stage0[30] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.696      ;
+; 13.253 ; main:main_inst|loop_inductionVar_stage0[15] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.691      ;
+; 13.257 ; main:main_inst|loop_inductionVar_stage0[8]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.687      ;
+; 13.257 ; main:main_inst|loop_inductionVar_stage0[21] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.687      ;
+; 13.261 ; main:main_inst|loop_inductionVar_stage0[14] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.683      ;
+; 13.274 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.671      ;
+; 13.275 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.670      ;
+; 13.279 ; main:main_inst|loop_inductionVar_stage0[9]  ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.665      ;
+; 13.289 ; main:main_inst|loop_inductionVar_stage0[16] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.655      ;
+; 13.291 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.654      ;
+; 13.294 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.651      ;
+; 13.294 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.651      ;
+; 13.295 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.650      ;
+; 13.298 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.647      ;
+; 13.298 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.647      ;
+; 13.299 ; main:main_inst|loop_inductionVar_stage0[24] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.645      ;
+; 13.304 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.640      ;
+; 13.304 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.641      ;
+; 13.304 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.641      ;
+; 13.305 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.640      ;
+; 13.321 ; main:main_inst|loop_inductionVar_stage0[10] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.623      ;
+; 13.335 ; main:main_inst|loop_inductionVar_stage0[28] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.609      ;
+; 13.342 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.603      ;
+; 13.342 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.603      ;
+; 13.343 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.602      ;
+; 13.348 ; main:main_inst|loop_inductionVar_stage0[13] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.596      ;
+; 13.353 ; main:main_inst|loop_inductionVar_stage0[22] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.591      ;
+; 13.358 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.587      ;
+; 13.359 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.586      ;
+; 13.359 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.585      ;
+; 13.359 ; main:main_inst|loop_inductionVar_stage0[19] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.585      ;
+; 13.360 ; main:main_inst|loop_inductionVar_stage0[25] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.584      ;
+; 13.362 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.583      ;
+; 13.362 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.583      ;
+; 13.362 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.583      ;
+; 13.363 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.582      ;
+; 13.366 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.579      ;
+; 13.366 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.579      ;
+; 13.368 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.576      ;
+; 13.372 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.573      ;
+; 13.372 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.573      ;
+; 13.372 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.573      ;
+; 13.373 ; main:main_inst|loop_inductionVar_stage0[17] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.571      ;
+; 13.373 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.572      ;
+; 13.376 ; main:main_inst|loop_inductionVar_stage0[26] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.568      ;
+; 13.388 ; main:main_inst|loop_inductionVar_stage0[23] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.556      ;
+; 13.389 ; main:main_inst|loop_inductionVar_stage0[18] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.555      ;
+; 13.410 ; main:main_inst|loop_inductionVar_stage0[4]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.535      ;
+; 13.410 ; main:main_inst|loop_inductionVar_stage0[2]  ; main:main_inst|loop_inductionVar_stage0[26] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.535      ;
+; 13.411 ; main:main_inst|loop_inductionVar_stage0[6]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.534      ;
+; 13.411 ; main:main_inst|loop_inductionVar_stage0[0]  ; main:main_inst|loop_inductionVar_stage0[24] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.534      ;
+; 13.418 ; main:main_inst|loop_inductionVar_stage0[11] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.526      ;
+; 13.419 ; main:main_inst|loop_inductionVar_stage0[20] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.525      ;
+; 13.424 ; main:main_inst|loop_inductionVar_stage0[30] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.520      ;
+; 13.425 ; main:main_inst|loop_inductionVar_stage0[29] ; main:main_inst|loop_epilogue                ; clk          ; clk         ; 15.000       ; -0.043     ; 1.519      ;
+; 13.426 ; main:main_inst|loop_inductionVar_stage0[9]  ; main:main_inst|loop_inductionVar_stage0[31] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.519      ;
+; 13.426 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[29] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.519      ;
+; 13.427 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[23] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.518      ;
+; 13.429 ; main:main_inst|loop_inductionVar_stage0[15] ; main:main_inst|loop_valid_bit_0             ; clk          ; clk         ; 15.000       ; -0.043     ; 1.515      ;
+; 13.430 ; main:main_inst|loop_inductionVar_stage0[9]  ; main:main_inst|loop_inductionVar_stage0[30] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.515      ;
+; 13.430 ; main:main_inst|loop_inductionVar_stage0[7]  ; main:main_inst|loop_inductionVar_stage0[28] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.515      ;
+; 13.430 ; main:main_inst|loop_inductionVar_stage0[5]  ; main:main_inst|loop_inductionVar_stage0[27] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.515      ;
+; 13.430 ; main:main_inst|loop_inductionVar_stage0[3]  ; main:main_inst|loop_inductionVar_stage0[25] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.515      ;
+; 13.431 ; main:main_inst|loop_inductionVar_stage0[1]  ; main:main_inst|loop_inductionVar_stage0[22] ; clk          ; clk         ; 15.000       ; -0.042     ; 1.514      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                                                                                                            ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                     ; To Node                                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.181 ; main:main_inst|finish                                                                         ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|cur_state.LEGUP_0                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; main:main_inst|loop_epilogue                                                                  ; main:main_inst|loop_epilogue                                                                  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.198 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_pipeline_finish_reg                                                       ; clk          ; clk         ; 0.000        ; 0.042      ; 0.324      ;
+; 0.213 ; main:main_inst|loop_valid_bit_0                                                               ; main:main_inst|loop_epilogue                                                                  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.339      ;
+; 0.247 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_6                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; clk          ; clk         ; 0.000        ; 0.042      ; 0.373      ;
+; 0.253 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_10 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; clk          ; clk         ; 0.000        ; 0.042      ; 0.379      ;
+; 0.257 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.383      ;
+; 0.271 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.042      ; 0.397      ;
+; 0.285 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.412      ;
+; 0.285 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.412      ;
+; 0.286 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.413      ;
+; 0.289 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_5                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_6                      ; clk          ; clk         ; 0.000        ; 0.042      ; 0.415      ;
+; 0.289 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_3                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_4                      ; clk          ; clk         ; 0.000        ; 0.042      ; 0.415      ;
+; 0.291 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.417      ;
+; 0.291 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.417      ;
+; 0.291 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_4                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_5                      ; clk          ; clk         ; 0.000        ; 0.042      ; 0.417      ;
+; 0.296 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.422      ;
+; 0.296 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.422      ;
+; 0.297 ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_3                      ; clk          ; clk         ; 0.000        ; 0.042      ; 0.423      ;
+; 0.297 ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.423      ;
+; 0.297 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[0]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.298 ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.298 ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.298 ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.298 ; main:main_inst|loop_inductionVar_stage0[31]                                                   ; main:main_inst|loop_inductionVar_stage0[31]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.301 ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.302 ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.428      ;
+; 0.302 ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.428      ;
+; 0.308 ; main:main_inst|loop_active                                                                    ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.042      ; 0.434      ;
+; 0.310 ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.436      ;
+; 0.316 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.442      ;
+; 0.316 ; main:main_inst|cur_state.LEGUP_0                                                              ; main:main_inst|finish                                                                         ; clk          ; clk         ; 0.000        ; 0.042      ; 0.442      ;
+; 0.316 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|cur_state.LEGUP_pipeline_wait_loop_2                                           ; clk          ; clk         ; 0.000        ; 0.042      ; 0.442      ;
+; 0.317 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; clk          ; clk         ; 0.000        ; 0.042      ; 0.443      ;
+; 0.321 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_9  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.447      ;
+; 0.322 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_9  ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_for_cond2_preheader_crit_edge_10 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.448      ;
+; 0.347 ; main:main_inst|loop_epilogue                                                                  ; main:main_inst|loop_valid_bit_0                                                               ; clk          ; clk         ; 0.000        ; 0.042      ; 0.473      ;
+; 0.356 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_pipeline_finish_reg                                                       ; clk          ; clk         ; 0.000        ; 0.042      ; 0.482      ;
+; 0.368 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_end9_11                                          ; main:main_inst|cur_state.LEGUP_0                                                              ; clk          ; clk         ; 0.000        ; 0.042      ; 0.494      ;
+; 0.374 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.501      ;
+; 0.374 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.500      ;
+; 0.378 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.504      ;
+; 0.380 ; main:main_inst|main_for_cond2_preheader_65_reg[2]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.507      ;
+; 0.386 ; main:main_inst|loop_valid_bit_0                                                               ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.512      ;
+; 0.390 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; main:main_inst|main_for_cond2_preheader_65_reg[1]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.516      ;
+; 0.393 ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[0]                 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; clk          ; clk         ; 0.000        ; 0.042      ; 0.519      ;
+; 0.394 ; main:main_inst|cur_state.LEGUP_F_main_BB_entry_1                                              ; main:main_inst|loop_active                                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.520      ;
+; 0.400 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.527      ;
+; 0.407 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[2]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.534      ;
+; 0.414 ; main:main_inst|main_for_cond2_preheader_65_reg[0]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[1]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.541      ;
+; 0.419 ; main:main_inst|main_for_cond2_preheader_65_reg[3]                                             ; main:main_inst|main_for_cond2_preheader_for_cond2_preheader_crit__var7_reg[3]                 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.546      ;
+; 0.424 ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_preheader_7                      ; main:main_inst|cur_state.LEGUP_F_main_BB_for_cond2_preheader_8                                ; clk          ; clk         ; 0.000        ; 0.042      ; 0.550      ;
+; 0.446 ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.572      ;
+; 0.447 ; main:main_inst|loop_inductionVar_stage0[5]                                                    ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.573      ;
+; 0.447 ; main:main_inst|loop_inductionVar_stage0[13]                                                   ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.573      ;
+; 0.447 ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; main:main_inst|loop_inductionVar_stage0[4]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.573      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[21]                                                   ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[11]                                                   ; main:main_inst|loop_inductionVar_stage0[12]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; main:main_inst|loop_inductionVar_stage0[18]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[19]                                                   ; main:main_inst|loop_inductionVar_stage0[20]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[29]                                                   ; main:main_inst|loop_inductionVar_stage0[30]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.448 ; main:main_inst|loop_inductionVar_stage0[27]                                                   ; main:main_inst|loop_inductionVar_stage0[28]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.574      ;
+; 0.449 ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; main:main_inst|loop_inductionVar_stage0[10]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.575      ;
+; 0.449 ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; main:main_inst|loop_inductionVar_stage0[24]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.575      ;
+; 0.449 ; main:main_inst|loop_inductionVar_stage0[25]                                                   ; main:main_inst|loop_inductionVar_stage0[26]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.575      ;
+; 0.457 ; main:main_inst|loop_inductionVar_stage0[0]                                                    ; main:main_inst|loop_inductionVar_stage0[1]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.583      ;
+; 0.457 ; main:main_inst|loop_inductionVar_stage0[6]                                                    ; main:main_inst|loop_inductionVar_stage0[7]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.583      ;
+; 0.458 ; main:main_inst|loop_inductionVar_stage0[14]                                                   ; main:main_inst|loop_inductionVar_stage0[15]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|loop_inductionVar_stage0[2]                                                    ; main:main_inst|loop_inductionVar_stage0[3]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|loop_inductionVar_stage0[16]                                                   ; main:main_inst|loop_inductionVar_stage0[17]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|loop_inductionVar_stage0[8]                                                    ; main:main_inst|loop_inductionVar_stage0[9]                                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
+; 0.458 ; main:main_inst|loop_inductionVar_stage0[22]                                                   ; main:main_inst|loop_inductionVar_stage0[23]                                                   ; clk          ; clk         ; 0.000        ; 0.042      ; 0.584      ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 9.815 ; 0.181 ; N/A      ; N/A     ; 7.184               ;
+;  clk             ; 9.815 ; 0.181 ; N/A      ; N/A     ; 7.184               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 798      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 798      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 50    ; 50   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; finish      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; finish      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon May 06 09:17:11 2019
+Info: Command: quartus_sta top -c top
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (332104): Reading SDC File: 'DCT.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 9.815
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.815               0.000 clk 
+Info (332146): Worst-case hold slack is 0.442
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.442               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.200
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.200               0.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 10.063
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    10.063               0.000 clk 
+Info (332146): Worst-case hold slack is 0.392
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.392               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.184
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.184               0.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 12.646
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    12.646               0.000 clk 
+Info (332146): Worst-case hold slack is 0.181
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.181               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.291
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.291               0.000 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Mon May 06 09:17:14 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -1,0 +1,92 @@
+// ----------------------------------------------------------------------------
+// LegUp High-Level Synthesis Tool Version 7.0 (http://legupcomputing.com)
+// Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
+// For technical issues, please contact: support@legupcomputing.com
+// For general inquiries, please contact: info@legupcomputing.com
+// Date: Mon May  6 09:14:11 2019
+// ----------------------------------------------------------------------------
+
+LegUp Summary Report for Project: DCT.
+
+Table of Contents
+  1. Scheduling Result
+  2. Pipeline Result
+  3. Memory Usage
+  4. Resource Binding with Adaptive Latency
+
+
+====== 1. Scheduling Result ======
+
+Please use LegUp's schedule viewer to examine the schedule.
+
+Basic Block Latencies:
+
++--------------------------------------------------------------------+
+| Function: main (non-pipelined function)                            |
++----------------------------------------------------+---------------+
+| Basic Block                                        | Cycle Latency |
++----------------------------------------------------+---------------+
+| %entry                                             | 1             |
+| %for.body.i                                        | 1             |
+| %for.cond2.preheader.preheader                     | 5             |
+| %for.cond2.preheader                               | 1             |
+| %for.cond2.preheader.for.cond2.preheader_crit_edge | 2             |
+| %for.end9                                          | 1             |
++----------------------------------------------------+---------------+
+
+====== 2. Pipeline Result ======
+
++-------+----------+-------------+-------------------------+---------------------+-----------------+-----------------+---------+
+| Label | Function | Basic Block | Location in Source Code | Initiation Interval | Pipeline Length | Iteration Count | Latency |
++-------+----------+-------------+-------------------------+---------------------+-----------------+-----------------+---------+
+| loop  | main     | %for.body.i | line 30 of tests.c      | 1                   | 1               | 1584            | 1584    |
++-------+----------+-------------+-------------------------+---------------------+-----------------+-----------------+---------+
+
+====== 3. Memory Usage ======
+
++-----------------------------------------------------------------------------------+
+| Local Memories                                                                    |
++-----------------+-----------------------+------+-------------+------------+-------+
+| Name            | Accessing Function(s) | Type | Size [Bits] | Data Width | Depth |
++-----------------+-----------------------+------+-------------+------------+-------+
+| main_entry_DCT1 | main                  | RAM  | 224         | 32         | 7     |
+| main_entry_DCT2 | main                  | RAM  | 224         | 32         | 7     |
+| main_entry_DCT3 | main                  | RAM  | 224         | 32         | 7     |
+| main_entry_DCT4 | main                  | RAM  | 224         | 32         | 7     |
+| main_entry_DCT5 | main                  | RAM  | 224         | 32         | 7     |
+| main_entry_DCT6 | main                  | RAM  | 224         | 32         | 7     |
+| main_entry_DCT7 | main                  | RAM  | 224         | 32         | 7     |
+| main_entry_DCT8 | main                  | RAM  | 224         | 32         | 7     |
++-----------------+-----------------------+------+-------------+------------+-------+
+
++-------------------------+
+| Local Constant Memories |
++-------------------------+
+| None                    |
++-------------------------+
+
++-----------------------+
+| Shared Local Memories |
++-----------------------+
+| None                  |
++-----------------------+
+
++------------------+
+| Aliased Memories |
++------------------+
+| None             |
++------------------+
+
++--------------+
+| I/O Memories |
++--------------+
+| None         |
++--------------+
+
+
+====== 4. Resource Binding with Adaptive Latency ======
+
+Binding to resource with adaptive latency is disabled.
+You can enable this feature by setting config parameter 'ADAPTIVE_LATENCY_BINDING' to 1.
+
+

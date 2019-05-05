@@ -1,0 +1,28 @@
+// ----------------------------------------------------------------------------
+// LegUp High-Level Synthesis Tool Version 7.0 (http://legupcomputing.com)
+// Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
+// For technical issues, please contact: support@legupcomputing.com
+// For general inquiries, please contact: info@legupcomputing.com
+// Date: Sun May  5 09:35:34 2019
+// ----------------------------------------------------------------------------
+Target FPGA: INTEL CycloneIV
+Clock period constraint: 1.500000e+01ns
+Start Function: main
+state: LEGUP_0, basic block: BB_entry
+   br label %for.body.i, !dbg !47, !MSB !51, !LSB !52, !extendFrom !51
+   Transition: if (start): LEGUP_pipeline_wait_lp_1 default: LEGUP_0
+state: LEGUP_pipeline_wait_lp_1, basic block: BB_for_body_i, pipeline type: loop, pipeline ID: main_for_body_i
+   %i.0381.i = phi i32 [ 0, %entry ], [ %0, %for.body.i ], !dbg !50, !legup.canonical_induction !53, !legup.pipeline.start_time !52, !legup.pipeline.avail_time !52, !legup.pipeline.stage !52, !MSB !54, !LSB !52, !extendFrom !54 (endState: LEGUP_pipeline_wait_lp_1)
+   br i1 %exitcond1, label %sobel_filter.exit, label %for.body.i, !dbg !47, !legup.II !53, !legup.totalTime !53, !legup.maxStage !52, !legup.tripCount !59, !legup.pipeline.start_time !52, !legup.pipeline.avail_time !52, !legup.pipeline.stage !52, !legup.loop_pipelined !53, !legup.label !60, !MSB !51, !LSB !52, !extendFrom !51
+   Transition: if (lp_pipeline_finish): LEGUP_F_main_BB_sobel_filter_exit_2 default: LEGUP_pipeline_wait_lp_1
+state: LEGUP_F_main_BB_sobel_filter_exit_2, basic block: BB_sobel_filter_exit
+   %call = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([5 x i8]* @.str1, i32 0, i32 0)) #2, !dbg !61, !MSB !62, !LSB !52, !extendFrom !62 (endState: LEGUP_F_main_BB_sobel_filter_exit_2)
+   ret i32 0, !dbg !63, !MSB !51, !LSB !52, !extendFrom !51
+   Transition: default: LEGUP_0
+
+Basic Block: %entry Num States: 1
+Basic Block: %for.body.i Num States: 1
+Basic Block: %sobel_filter.exit Num States: 1
+End Function: main
+--------------------------------------------------------------------------------
+
